@@ -18,6 +18,7 @@ public class VideoController {
 
     @GetMapping("/stream")
     public ResponseEntity<byte[]> streamVideo() throws IOException {
+        //這邊放影片位置 之後拍好影片 把影片放在這個位置
         Path videoPath = Paths.get("D:\\學習IDEA\\demovideo\\backend\\demovideo\\video\\sample.mp4");
 
         if (!Files.exists(videoPath) || !Files.isRegularFile(videoPath)) {
